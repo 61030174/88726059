@@ -1,7 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+  <title>MyGame</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
 <body>
+    <div class="jumbotron text-center">
+        <h1>My Game</h1>
+        <p>มาเล่นเกมกัน!</p> 
+    </div>
 <div class="text-center">
+    <h3>ลองทายหมายเลขดูสิ!!!!</h3></br>
     <input type="text" placeholder="?" id="text" size="50">
     <button onclick="guess()" class="btn btn-warning">Guess</button>
     <div id="hist"></div>
@@ -12,7 +23,7 @@
         //alert(rn)
         function guess() {
             text = document.getElementById("text").value;
-            document.getElementById("hist").innerHTML += text + " ";
+            document.getElementById("hist").innerHTML += text + " "; 
             if(text > rn){
                 document.getElementById("result").innerHTML = "มากไป";
             }
