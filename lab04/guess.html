@@ -1,5 +1,21 @@
-<script>
-    rn = Math.floor(Math.random()*100);
-    //alert(rn);
-    document.write(rn);
-</script>
+<body>
+    <div class="text-center">
+        <input type="text" placeholder="?" id="text" size="50">
+        <button onclick="guess()" class="btn btn-warning">Guess</button>
+        <div id="hist"></div>
+        <div id="result"></div>
+        <button onclick="doreset()" class="btn btn-info">Start Over</button>
+        <script>
+            rn = Math.floor(Math.random()*100);
+            //alert(rn)
+            function doreset(){
+                document.getElementById('result').innerHTML='';
+                document.getElementById('hist').innerHTML='';
+                document.getElementById('text').value='?';
+                rn = Math.floor(Math.random()*100);
+            }
+        </script> 
+    </div>
+    </body>
+    </html>
+    
